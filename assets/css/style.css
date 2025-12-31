@@ -3548,6 +3548,7 @@ a {
 }
 .gallery-page .gallery_content .contact-form-img img{
   filter: drop-shadow(10px 0px 16px #cccc);
+  border-radius: 10px;
 }
 .gallery-page{
   padding: 166px 0 56px;
