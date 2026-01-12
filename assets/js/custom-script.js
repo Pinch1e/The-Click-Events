@@ -1,14 +1,14 @@
   
-           $(document).ready(function() {
+$(document).ready(function() {
 
             var counters = $(".count");
             var countersQuantity = counters.length;
             var counter = [];
-            
+
             for (i = 0; i < countersQuantity; i++) {
               counter[i] = parseInt(counters[i].innerHTML,10);
             }
-            
+
             var count = function(start, value, id) {
               var localStart = start;
               setInterval(function() {
@@ -18,10 +18,23 @@
                 }
               }, 40);
             }
-            
+
             for (j = 0; j < countersQuantity; j++) {
               count(0, counter[j], j);
             }
+
+            // Navbar burger toggle
+            $('.navbar-toggler').click(function() {
+                $('#navbarSupportedContent').toggleClass('show');
+                $(this).toggleClass('collapsed');
+            });
+
+            // Close navbar when a nav link is clicked
+            $('.navbar-nav .nav-link').click(function() {
+                $('#navbarSupportedContent').removeClass('show');
+                $('.navbar-toggler').addClass('collapsed');
+            });
+
             });
 
 

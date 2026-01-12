@@ -1,24 +1,10 @@
-@media screen and (min-width: 1951px) {
-.banner-img-content-about {
-  left: 15px;
-  top: 123px;
+/* Typography Updates for Mobile */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
-.services-section .services-content-page {
-  padding: 30px 32px;
-}
-.whychooseus-section::after {
-  width: 445px;
-  height: 405px;
-  position: absolute;
-  right: -97px;
-  bottom: -135px;
-}
-.partners-section {
-  padding: 128px 0 136px;
-}
-.sub-baner{
-  padding-bottom: 0;
-}
+
+body, p, button, input, a, nav, footer {
+  font-family: 'Jost', sans-serif;
 }
 @media screen and (max-width: 1950px) {
 /* .home-header-section .main-header .navbar-brand {
@@ -1790,7 +1776,7 @@ h6 {
   top: 50px;
   /* z-index: -1 !important; */
   padding: 0;
-  background:var(--e-global-color-accent);
+  background: var(--e-global-color-hover);
   border-radius: 0px;
   color: var(--e-global-color-hover) !important;
 }

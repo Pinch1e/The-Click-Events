@@ -1,16 +1,16 @@
 .generic-btn{
     padding: 16px 37px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 700;
     font-size: 18px;
     background: var(--accent-color);
     border-radius: 45px;
     color: var(--secondary--color);
     display: inline-block;
-    box-shadow: 0px 0px 20px 0px rgb(251 156 35 / 30%);  
+    box-shadow: 0px 0px 20px 0px rgb(251 156 35 / 30%);
     transition-duration: .3s;
     transition-property: transform;
-    transition-timing-function: ease-out;  
+    transition-timing-function: ease-out;
 }
 .generic-btn:hover,
 .Started-btn:hover,
@@ -23,7 +23,7 @@
 }
 .Started-btn{
     padding: 13px 25px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 700;
     font-size: 16px;
     background: var(--accent-color);
@@ -33,7 +33,7 @@
     box-shadow: 0px 0px 20px 0px rgb(251 156 35 / 30%);
     transition-duration: .3s;
     transition-property: transform;
-    transition-timing-function: ease-out; 
+    transition-timing-function: ease-out;
 }
 .align{
 	text-align: center;
@@ -130,4 +130,12 @@ p{
 }
 .overflow{
     overflow: hidden;
+}
+.img{
+    position: relative;
+    z-index: 100;
+}
+.mask-group{
+    position: relative;
+    z-index: 1;
 }
