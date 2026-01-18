@@ -1770,10 +1770,10 @@ h6 {
   display: none;
 }
 .navbar-collapse {
-  position: absolute;
+  position: relative;
   right: 0px;
-  width: 28%;
-  top: 50px;
+  width: 100%;
+  top: 0px;
   /* z-index: -1 !important; */
   padding: 0;
   background: var(--e-global-color-hover);
