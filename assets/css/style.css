@@ -3339,9 +3339,13 @@ a {
 /*  pricing-plan-section*/
 .pricing-plan-section .services-content .icons-rounded-box {
   padding: 0;
-  border-radius: 6px;
-  margin-bottom:37px;
+  border-radius: 10px;
+  margin-bottom: 37px;
   text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 1200px;
+  overflow: hidden;
 }
 .pricing-plan-section .pricing-plan-color {
   color: var(--e-global-color-primary);
@@ -3411,8 +3415,66 @@ a {
 }
 .pricing-plan-section .services-content .icons-rounded-box figure img {
   filter: drop-shadow(10px 0px 16px #cccc);
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pricing-plan-section .carousel-control-prev,
+.pricing-plan-section .carousel-control-next {
+  width: 5%;
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(19, 15, 0, 0.8), rgba(241, 198, 19, 0.8));
+  border: 2px solid rgba(241, 198, 19, 0.5);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-plan-section .carousel-control-prev:hover,
+.pricing-plan-section .carousel-control-next:hover {
+  background: linear-gradient(135deg, rgba(241, 198, 19, 0.9), rgba(19, 15, 0, 0.9));
+  border-color: rgba(241, 198, 19, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-plan-section .carousel-control-prev-icon,
+.pricing-plan-section .carousel-control-next-icon {
+  background-image: none;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  animation: globeRotate 3s linear infinite;
+}
+
+.pricing-plan-section .carousel-control-prev:hover .carousel-control-prev-icon,
+.pricing-plan-section .carousel-control-next:hover .carousel-control-next-icon {
+  color: rgba(19, 15, 0, 1);
+}
+
+.pricing-plan-section .carousel-control-prev-icon::before {
+  content: "\f104";
+  font-family: "FontAwesome";
+}
+
+.pricing-plan-section .carousel-control-next-icon::before {
+  content: "\f105";
+  font-family: "FontAwesome";
+}
+
+@keyframes globeRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 .pricing-plan-section .services-content .pricing-plane-prices{
   color: var(--e-global-color-accent);
@@ -3434,38 +3496,7 @@ a {
   padding: 0 25px;
   letter-spacing: 1px;
 }
-.story-section-pricing{
-  background: var(--e-global-color-light-green);
-  padding: 160px 0 268px;
-  position: relative;
-}
-.story-section-pricing #carouselExampleIndicators:before {
-  background: url(../images/category-lines-img.png);
-  content: "";
-  width: 555px;
-  height: 1002px;
-  position: absolute;
-  right: 72px;
-  bottom: -306px;
-}
-.story-section-pricing .design-img {
-  position: absolute;
-  top: 205px;
-  left: -93px;
-}
-.story-section-pricing .story-card-content {
-  position: absolute;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-  transition: 0.3s;
-  width: 665px;
-  z-index: 1;
-  background: var(--e-global-color-secondary);
-  text-align: center;
-  padding: 78px 65px 84px;
-  border-radius: 0 0 100px 0;
-  top: 100px;
-  left: -40px;
-}
+
 /* gallery-page */
 .gallery-page .gallery_content{
   background-color: var(--e-global-color-secondary);
