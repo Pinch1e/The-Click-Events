@@ -121,7 +121,8 @@ a {
 /****** headerm and banner section******/
 
 /* animation */
-/* .home-banner-section .home-banner-text .ityped-cursor {
+
+.home-banner-section .home-banner-text .ityped-cursor {
   font-size: 1em;
   opacity: 1;
   -webkit-animation: blink 0.3s infinite;
