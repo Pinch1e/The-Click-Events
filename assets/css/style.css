@@ -147,9 +147,9 @@ a {
      opacity: 0;
  }
 
-} */
+}
 
-/* @keyframes ani{
+@keyframes ani{
   from{
       letter-spacing:36px;
       filter: blur(5px);
@@ -159,7 +159,7 @@ a {
       filter: blur(0);
       opacity: 1px;
   }
-} */
+} 
 
 .h1-text {
   color: var(--e-global-color-accent);
@@ -213,6 +213,12 @@ a {
 }
 .header-top1 .header-right ul li{
   margin-right: 4px;
+}
+.header-top1 .header-right ul.list-unstyled {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .header-top1 .header-left .phone-icon i {
   margin-left: 7px;
@@ -346,6 +352,10 @@ a {
   width: 80%;
 }
 
+a#navbarDropdown::after {
+  content: none !important;
+}
+
 .home-header-section  .main-header .navbar-collapse .btn-talk{
   margin-left:52px !important;
   /* z-index: 1; */
@@ -378,137 +388,7 @@ a {
   transition: ease-in-out 0.3s;
 }
 
-/* Modern Dropdown Styling */
-.home-header-section  .main-header .navbar-collapse .redlight-dropdown a{
-  color: var(--e-global-color-primary);
-  transition: all 0.3s ease;
-}
 
-.dropdown-content-redlight {
-  background: #ffffff !important;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 8px 0;
-  margin-top: 8px;
-  min-width: 220px;
-  animation: dropdownFadeIn 0.2s ease-out;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  position: absolute;
-  z-index: 1020;
-}
-
-@keyframes dropdownFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.dropdown-content-redlight ul {
-  margin: 0;
-  padding: 0;
-}
-
-.dropdown-content-redlight ul li {
-  margin: 0 !important;
-  position: relative;
-}
-
-.dropdown-content-redlight ul li a {
-  color: #262626 !important;
-  line-height: 20px;
-  padding: 12px 20px !important;
-  width: 100%;
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.dropdown-content-redlight ul li a:hover {
-  background: transparent !important;
-  color: #F1C613 !important;
-  transform: translateX(4px);
-}
-
-.dropdown-content-redlight ul li a:active {
-  background: #e9ecef !important;
-  color: #0056b3 !important;
-}
-
-.dropdown-content-redlight ul li:not(:last-child) a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 1px;
-  background: #f0f0f0;
-}
-
-.dropdown-content-redlight ul li:first-child a {
-  border-radius: 12px 12px 0 0;
-}
-
-.dropdown-content-redlight ul li:last-child a {
-  border-radius: 0 0 12px 12px;
-}
-
-/* Active state for current page */
-.dropdown-item.active, .dropdown-item:active {
-  background: linear-gradient(135deg, #007bff, #0056b3) !important;
-  color: #ffffff !important;
-  font-weight: 500;
-}
-
-.dropdown-item.active a, .dropdown-item:active a {
-  color: #ffffff !important;
-}
-
-/* Dropdown arrow indicator */
-.redlight-dropdown .nav-link.dropdown-toggle::after {
-  content: '';
-  border: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px;
-  width: 12px;
-  height: 12px;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.redlight-dropdown.show .nav-link.dropdown-toggle::after {
-  transform: rotate(180deg);
-}
-
-/* Enhanced hover effects */
-.home-header-section .main-header .navbar-collapse .navbar-nav .dropdown-content-redlight ul li a {
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-/* Remove default Bootstrap dropdown styles */
-.dropdown-menu {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.dropdown-item {
-  padding: 0 !important;
-}
 .home-header-section  .main-header .navbar-collapse .btn-talk a {
   background: var(--e-global-color-accent);
   line-height: 16px;
@@ -4287,3 +4167,5 @@ a {
 /* } */
 
 /* about-page */
+
+

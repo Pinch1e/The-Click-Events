@@ -5322,8 +5322,12 @@ h3 {
   text-align: center;
 }
 .redlight-dropdown .dropdown-content-redlight {
-  width: 100%;
+  width: auto;
+  min-width: 160px;
   top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 .navbar-collapse a {
   line-height: 16px;
@@ -5632,5 +5636,112 @@ h6 {
 }
 .container-comming-soon {
   padding: 174px 0 16px;
+}
+
+/* Mobile Dropdown Menu Styles */
+@media screen and (max-width: 767px) {
+    .mobile-dropdown {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: none;
+    }
+
+    .dropdown-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        transform: translateY(-20px) scale(0.95);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-dropdown.show .dropdown-overlay {
+        opacity: 1;
+    }
+
+    .mobile-dropdown.show .dropdown-content {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        min-height: 48px; /* Thumb-friendly touch target */
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f8f8f8;
+    }
+
+    .dropdown-item:active {
+        background-color: #e8e8e8;
+        transform: scale(0.98);
+    }
+
+    .dropdown-item i {
+        font-size: 18px;
+        color: #333;
+        margin-right: 16px;
+        width: 20px;
+        text-align: center;
+    }
+
+    .dropdown-item span {
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+    }
+
+    .profile-trigger {
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+
+    .profile-trigger:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-trigger i {
+        font-size: 24px;
+        color: #fff;
+    }
+}
+
+/* Hide dropdown on desktop */
+@media screen and (min-width: 768px) {
+    .mobile-dropdown {
+        display: none !important;
+    }
 }
 }

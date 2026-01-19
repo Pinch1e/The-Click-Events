@@ -25,13 +25,19 @@ $(document).ready(function() {
 
             // Navbar burger toggle
             $('.navbar-toggler').click(function() {
-                $('#navbarSupportedContent').toggleClass('show');
+                $('#mobile-dropdown').toggleClass('show');
                 $(this).toggleClass('collapsed');
             });
 
-            // Close navbar when a nav link is clicked
-            $('.navbar-nav .nav-link').click(function() {
-                $('#navbarSupportedContent').removeClass('show');
+            // Close dropdown when overlay is clicked
+            $('.dropdown-overlay').click(function() {
+                $('#mobile-dropdown').removeClass('show');
+                $('.navbar-toggler').addClass('collapsed');
+            });
+
+            // Close dropdown when a dropdown item is clicked
+            $('.dropdown-item').click(function() {
+                $('#mobile-dropdown').removeClass('show');
                 $('.navbar-toggler').addClass('collapsed');
             });
 
