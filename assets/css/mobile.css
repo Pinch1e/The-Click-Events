@@ -1780,6 +1780,17 @@ h6 {
   border-radius: 0px;
   color: var(--e-global-color-hover) !important;
 }
+#navbarSupportedContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.175);
+  min-width: 10rem;
+}
 .navbar-collapse a {
   line-height: 16px;
   padding: 10px 20px !important;
