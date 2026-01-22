@@ -392,10 +392,10 @@ a {
 }
 
 .dropdown-content-redlight {
-  background: #ffffff !important;
-  border: 1px solid #e0e0e0;
+  background: #1a1a1a !important;
+  border: 1px solid #333;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
   padding: 8px 0;
   margin-top: 8px;
   min-width: 220px;
@@ -404,6 +404,11 @@ a {
   -webkit-backdrop-filter: blur(20px);
   position: absolute;
   z-index: 1020;
+  display: none;
+}
+
+.dropdown-content-redlight.show {
+  display: block;
 }
 
 @keyframes dropdownFadeIn {

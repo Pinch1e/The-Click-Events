@@ -29,6 +29,17 @@ $(document).ready(function() {
                 $('.navbar-toggler').addClass('collapsed');
             });
 
+            // Handle dropdown toggle on hover
+            $('.dropdown').hover(function(e) {
+                var dropdownMenu = $(this).find('.dropdown-menu');
+                $('.dropdown-menu').not(dropdownMenu).removeClass('show');
+                dropdownMenu.addClass('show');
+                $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
+            }, function(e) {
+                $(this).find('.dropdown-menu').removeClass('show');
+                $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
+            });
+
             });
 
 
