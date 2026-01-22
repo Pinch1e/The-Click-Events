@@ -313,6 +313,14 @@ a {
   color: var(--e-global-color-accent);
 }
 
+.home-header-section  .main-header .navbar-collapse .navbar-nav .active > a::after {
+  width: 80%;
+}
+
+.home-header-section .main-header .navbar-collapse .navbar-nav .active > a:hover {
+  color: var(--e-global-color-accent);
+}
+
 
 
 .home-header-section  .main-header .navbar-collapse .navbar-nav a {

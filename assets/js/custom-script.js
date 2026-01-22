@@ -23,12 +23,6 @@ $(document).ready(function() {
               count(0, counter[j], j);
             }
 
-            // Navbar burger toggle
-            $('.navbar-toggler').click(function() {
-                $('#navbarSupportedContent').toggleClass('show');
-                $(this).toggleClass('collapsed');
-            });
-
             // Close navbar when a nav link is clicked
             $('.navbar-nav .nav-link').click(function() {
                 $('#navbarSupportedContent').removeClass('show');
