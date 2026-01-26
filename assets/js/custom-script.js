@@ -26,18 +26,31 @@ $(document).ready(function() {
             // Close navbar when a nav link is clicked
             $('.navbar-nav .nav-link').click(function() {
                 $('#navbarSupportedContent').removeClass('show');
-                $('.navbar-toggler').addClass('collapsed');
+                $('.navbar-toggler').removeClass('collapsed');
             });
 
-            // Handle dropdown toggle on hover
-            $('.dropdown').hover(function(e) {
-                var dropdownMenu = $(this).find('.dropdown-menu');
+            // Burger menu toggle functionality
+            $('.navbar-toggler').click(function(e) {
+                e.preventDefault(); // Prevent Bootstrap's default toggle
+                $(this).toggleClass('collapsed');
+                $('#navbarSupportedContent').toggleClass('show');
+            });
+
+            // Handle dropdown toggle on click
+            $('.dropdown-toggle').click(function(e) {
+                e.preventDefault();
+                var dropdownMenu = $(this).next('.dropdown-menu');
                 $('.dropdown-menu').not(dropdownMenu).removeClass('show');
-                dropdownMenu.addClass('show');
-                $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
-            }, function(e) {
-                $(this).find('.dropdown-menu').removeClass('show');
-                $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
+                dropdownMenu.toggleClass('show');
+                $(this).attr('aria-expanded', dropdownMenu.hasClass('show'));
+            });
+
+            // Close dropdown when clicking outside
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu').removeClass('show');
+                    $('.dropdown-toggle').attr('aria-expanded', 'false');
+                }
             });
 
             });
