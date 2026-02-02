@@ -5618,6 +5618,7 @@ h6 {
     transform: perspective(1000px) rotateX(10deg) translateZ(20px) scale(1.05);
     text-shadow: 0 0 10px rgba(241, 198, 19, 0.5);
     border-bottom: 2px solid #f1c613;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
   }
 
   /* Ensure dropdown has black background */

@@ -22,6 +22,7 @@ Project: The Click Events
 
 body {
 font-family: 'Jost', sans-serif;
+padding-top: 120px; /* Adjust based on header height */
 }
 :root {
   --e-global-color-primary: #000000;
@@ -192,6 +193,10 @@ a {
   color: var(--e-global-color-secondary);
   padding: 6px 0;
   background:var(--e-global-color-accent);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .header-left .phone-icon {
   background: var(--e-global-moderate-violet);
@@ -279,6 +284,14 @@ a {
 }
 .home-header-section .main-header {
   padding-top: 29px;
+}
+
+header.header {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1000;
 }
 .home-banner-section .banner-container-box .home-banner-text{
   padding-left:0px;
