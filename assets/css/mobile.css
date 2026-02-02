@@ -7,12 +7,12 @@ body, p, button, input, a, nav, footer {
   font-family: 'Jost', sans-serif;
 }
 @media screen and (max-width: 1950px) {
-/* .home-header-section .main-header .navbar-brand {
+.home-header-section .main-header .navbar-brand {
   margin-right: 181px;
-} */
-/* .home-header-section .main-header {
+}
+.home-header-section .main-header {
   padding: 26px 298px 0 310px;
-} */
+} 
 .about-us-section .about-left-back-img {
   left: -41%;
 }

@@ -198,6 +198,36 @@ a {
   width: 100%;
   z-index: 1000;
 }
+
+/* partners section */
+.partners-section {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--e-global-color-light-green);
+}
+
+.partners-section h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--e-global-color-primary);
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.partners-logos span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--e-global-color-accent);
+  padding: 10px 15px;
+  border: 1px solid var(--e-global-color-accent);
+  border-radius: 5px;
+  background: #fff;
+}
 .header-left .phone-icon {
   background: var(--e-global-moderate-violet);
   padding: 9px 10p;
